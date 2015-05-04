@@ -146,8 +146,6 @@ span {
     border-color: white;
     border-style: dotted;
     border-radius: 50%;
-
-    z-index: 1;
 }
 
 #moon-orb {
