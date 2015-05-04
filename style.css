@@ -63,6 +63,12 @@ span {
     border-width: 2px;
     border-radius: 10px;
     border-color: white;
+
+    margin-top: -20px;
+    margin-left: -52px;
+
+    background-color: #000000;
+    text-align: center;
 }
 
 #sun {
