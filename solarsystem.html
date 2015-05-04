@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="style.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
     </head>
     
     <body>
@@ -17,38 +18,7 @@
                 <div class="text" id='animText'>Stop animation</div>
             </div>
         </div>
-        
-        <script>
-            $(document).ready(function() {
-                var orbCount = 0;
-                $('#orbits.button').click(function() {
-                    if (orbCount === 0) {
-                        $('#orbText').text('Show orbits');
-                        $('.orbit, #moon-orb').css('border-style', 'hidden');
-                        orbCount++;
-                    }
-                    else {
-                        $('#orbText').text('Hide orbits');
-                        $('.orbit, #moon-orb').css('border-style', 'dotted');
-                        orbCount--;
-                    }
 
-                });
-                var animCount = 0;
-                $('#anim.button').click(function() {
-                    if (animCount === 0) {
-                        $('.planet, .orbit, #moon-orb, #sun').css('-webkit-animation-play-state', 'paused');
-                        $('#animText').text('Play animation');
-                        animCount++;
-                    }
-                    else {
-                        $('.planet, .orbit, #moon-orb, #sun').css('-webkit-animation-play-state', 'running');
-                        $('#animText').text('Stop animation');
-                        animCount--;
-                    }
-                });
-            });
-        </script>
 
     
         <img id="sun" src="http://fc02.deviantart.net/fs70/f/2013/292/7/5/sun_transparent_background_sun_world_by_royalblueiv-d6r3ze7.png">
@@ -84,15 +54,14 @@
         </div>
         
         <div class='orbit' id='earth-orb'>
-            <img class='planet' id="earth" src="http://upload.wikimedia.org/wikipedia/commons/2/22/Earth_Western_Hemisphere_transparent_background.png">
-            <div id='moon-orb'>
+            <div class='planet' id="earth">
+                <div id='moon-orb'></div>
                 <img class='planet' id="moon" src="http://space-facts.com/wp-content/uploads/moon-transparent.png">
             </div>
         </div>
         
-        <div class='orbit' id='venus-orb'>
-            <img class='planet' id='venus' src='https://lh5.googleusercontent.com/-tqsPCaf2--U/T_9xiSRAOyI/AAAAAAAAACc/XDz9LtjZnXY/w800-h800/venus%2B%25281%2529.png'>
-        </div>
+        <div class='orbit' id='venus-orb'></div>
+        <img class='planet' id='venus' src='https://lh5.googleusercontent.com/-tqsPCaf2--U/T_9xiSRAOyI/AAAAAAAAACc/XDz9LtjZnXY/w800-h800/venus%2B%25281%2529.png'>
 
         <div class='orbit' id='mercury-orb'></div>
         <img class='planet' id='mercury' src='http://1.bp.blogspot.com/-S4WaVF7emzU/Tiz2l3xYegI/AAAAAAAAALI/PC7BtFc2lEk/s1600/mercury.png'>

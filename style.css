@@ -84,8 +84,11 @@ span {
 }
 
 #venus {
-    top: 38px;
-    left: 39px;
+    top: 50%;
+    left: 50%;
+
+    margin-top: -17px;
+    margin-left: -17px;
     
     height: 31px;
     width: 31px;
@@ -93,20 +96,27 @@ span {
 }
 
 #earth {
-    top: 55px;
-    left: 55px;
+    background: url("http://upload.wikimedia.org/wikipedia/commons/2/22/Earth_Western_Hemisphere_transparent_background.png");
+    background-size: 37px 37px;
+
+    top: 50%;
+    left: 50%;
     
+    margin-top: -20px;
+    margin-left: -20px;
+
     height: 37px;
     width: 37px;
     -webkit-animation: rotEarth 10s linear infinite;
 }
 
 #moon {
-    top: 0px;
-    left: 0px;
-    
     height: 15px;
     width: 15px;
+
+    margin-top: 11px;
+    margin-left: 10px;
+
     -webkit-animation: rotMoon 2s linear infinite;
 }
 
@@ -156,11 +166,12 @@ span {
 
 #moon-orb {
     position: absolute;
-    top: 42px;
-    left: 42px;
-    
+
     width: 60px;
     height: 60px;
+
+    margin-top: -13px;
+    margin-left: -15px;
     
     border-width: 2px;
     border-color: white;
@@ -256,8 +267,38 @@ span {
     }
 }
 
+@-webkit-keyframes rotEarth {
+    from {
+        -webkit-transform:  rotate(0deg)
+                            translate(-250px)
+                            rotate(0deg);
+    }
+    to {
+        -webkit-transform:  rotate(360deg)
+                            translate(-250px) 
+                            rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes rotMoon {
+    from {
+        -webkit-transform:  rotate(0deg)
+                            translate(-31px)
+                            rotate(0deg);
+    }
+    to {
+        -webkit-transform:  rotate(360deg)
+                            translate(-31px) 
+                            rotate(-360deg);
+    }
+}
+
+
+
+
+
     
-/*@-webkit-keyframes spin-right {
+@-webkit-keyframes spin-right {
     100% {
         -webkit-transform: rotate(360deg);
            -moz-transform: rotate(360deg);
@@ -275,4 +316,4 @@ span {
          -o-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}*/
+}
