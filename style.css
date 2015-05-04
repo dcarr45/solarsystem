@@ -1,0 +1,278 @@
+/*TODO
+zoom
+figure out different orbit technique
+trace orbits
+fuck this sucks
+*/
+
+html, body {
+    /* The universe takes up all available space */
+    width: 100%;
+    height: 100%;
+    
+    background-image: url("http://th01.deviantart.net/fs71/PRE/i/2011/017/6/f/starfield_stock_by_freelancah-d2k5mcu.jpg");
+    background-size: 100% 100%;
+}
+
+.bar {
+    position: relative;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    background-color: #5d9ea2;
+    height: 35px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: white;
+    cursor: pointer;
+}
+
+#orbits {
+    width: 120px;
+}
+
+#anim {
+    width: 150px;
+}
+
+span {
+    line-height: 35px;
+}
+
+.text {
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+}
+
+#sun {
+    position: absolute;
+    /* Positions the top-left corner of the image to be *
+    /* in the middle of the box */
+    top: 50%;
+    left: 50%;
+    
+    /* Play with these numbers to see what it does */
+    height: 200px;
+    width: 200px;
+    margin-top: -100px; 
+    margin-left: -100px;
+    -webkit-animation: spin-right 120s linear infinite;
+    
+}
+
+.planet {
+    /* Style your earth */
+    position: absolute;
+}
+
+#mercury {
+    top: 50%;
+    left: 50%;
+
+    margin-top: -8px;
+    margin-left: -8px;
+
+    height: 18px;
+    width: 18px;
+    -webkit-animation: rotMerc 2.41s linear infinite;
+}
+
+#venus {
+    top: 38px;
+    left: 39px;
+    
+    height: 31px;
+    width: 31px;
+    -webkit-animation: rotVen 6.16s linear infinite;
+}
+
+#earth {
+    top: 55px;
+    left: 55px;
+    
+    height: 37px;
+    width: 37px;
+    -webkit-animation: rotEarth 10s linear infinite;
+}
+
+#moon {
+    top: 0px;
+    left: 0px;
+    
+    height: 15px;
+    width: 15px;
+    -webkit-animation: rotMoon 2s linear infinite;
+}
+
+#mars {
+    top: 82px;
+    left: 82px;
+
+    height: 24px;
+    width: 24px;
+    -webkit-animation: rotMars 18.82s linear infinite;
+}
+
+/*.asteroid1 {
+    height: 8px;
+    width: 8px;
+}
+
+.asteroid2{
+    height: 6px;
+    width: 9px;
+}
+
+.asteroid3 {
+    height: 10px;
+    width: 8px;
+}*/
+
+#jupiter {
+    top: 78px;
+    left: 78px;
+
+    height: 120px;
+    width: 120px;
+    -webkit-animation: rotJup 118.6s linear infinite;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    border-width: 2px;
+    border-color: white;
+    border-style: dotted;
+    border-radius: 50%;
+}
+
+#moon-orb {
+    position: absolute;
+    top: 42px;
+    left: 42px;
+    
+    width: 60px;
+    height: 60px;
+    
+    border-width: 2px;
+    border-color: white;
+    border-style: dotted;
+    border-radius: 50%;
+}
+
+#mercury-orb {
+    width: 285px;
+    height: 285px;
+    margin-top: -143px;
+    margin-left: -143px;
+}
+
+#venus-orb {
+    width: 376px;
+    height: 376px;
+    margin-top: -188px;
+    margin-left: -188px;
+}
+
+#earth-orb {
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
+}
+
+#mars-orb {
+    width: 650px;
+    height: 650px;
+    margin-top: -325px;
+    margin-left: -325px;
+}
+
+#ast3 {
+    width: 600px;
+    height: 600px;
+    margin-top: -300px;
+    margin-left: -300px;
+    -webkit-animation-duration: 11s;
+    border-style: hidden;
+}
+
+#ast2 {
+    width: 608px;
+    height: 608px;
+    margin-top: -304px;
+    margin-left: -304px;
+    -webkit-animation-duration: 13s;
+    border-style: hidden;
+}
+
+#ast1 {
+    width: 612px;
+    height: 612px;
+    margin-top: -306px;
+    margin-left: -306px;
+    -webkit-animation-duration: 12s;
+    border-style: hidden;
+}
+
+#jupiter-orb {
+    width: 1000px;
+    height: 1000px;
+    margin-top: -500px;
+    margin-left: -500px;
+}
+
+@-webkit-keyframes rotMerc {
+    from {
+        -webkit-transform:  rotate(0deg)
+                            translate(-143px)
+                            rotate(0deg);
+    }
+    to {
+        -webkit-transform:  rotate(360deg)
+                            translate(-143px) 
+                            rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes rotVen {
+    from {
+        -webkit-transform:  rotate(0deg)
+                            translate(-188px)
+                            rotate(0deg);
+    }
+    to {
+        -webkit-transform:  rotate(360deg)
+                            translate(-188px) 
+                            rotate(-360deg);
+    }
+}
+
+    
+/*@-webkit-keyframes spin-right {
+    100% {
+        -webkit-transform: rotate(360deg);
+           -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+             -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}*/
