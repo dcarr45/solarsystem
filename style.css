@@ -16,6 +16,7 @@ html, body {
 
 .bar {
     position: relative;
+    z-index: 2;
 }
 
 .button {
@@ -30,7 +31,6 @@ html, body {
     border-radius: 10px;
     border-color: white;
     cursor: pointer;
-    z-index: 1;
 }
 
 #orbits {
@@ -130,8 +130,8 @@ span {
 }*/
 
 #jupiter {
-    top: 78px;
-    left: 78px;
+    top: 85px;
+    left: 85px;
 
     height: 120px;
     width: 120px;
