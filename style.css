@@ -30,6 +30,7 @@ html, body {
     border-radius: 10px;
     border-color: white;
     cursor: pointer;
+    z-index: 1;
 }
 
 #orbits {
@@ -69,18 +70,16 @@ span {
 .planet {
     /* Style your earth */
     position: absolute;
+    
+    -webkit-animation: spin-right 4s linear infinite;
 }
 
 #mercury {
-    top: 50%;
-    left: 50%;
-
-    margin-top: -8px;
-    margin-left: -8px;
+    top: 32px;
+    left: 32px;
 
     height: 18px;
     width: 18px;
-    -webkit-animation: rotMerc 2.41s linear infinite;
 }
 
 #venus {
@@ -89,7 +88,6 @@ span {
     
     height: 31px;
     width: 31px;
-    -webkit-animation: rotVen 6.16s linear infinite;
 }
 
 #earth {
@@ -98,7 +96,6 @@ span {
     
     height: 37px;
     width: 37px;
-    -webkit-animation: rotEarth 10s linear infinite;
 }
 
 #moon {
@@ -107,7 +104,6 @@ span {
     
     height: 15px;
     width: 15px;
-    -webkit-animation: rotMoon 2s linear infinite;
 }
 
 #mars {
@@ -116,7 +112,6 @@ span {
 
     height: 24px;
     width: 24px;
-    -webkit-animation: rotMars 18.82s linear infinite;
 }
 
 /*.asteroid1 {
@@ -140,7 +135,6 @@ span {
 
     height: 120px;
     width: 120px;
-    -webkit-animation: rotJup 118.6s linear infinite;
 }
 
 .orbit {
@@ -166,6 +160,8 @@ span {
     border-color: white;
     border-style: dotted;
     border-radius: 50%;
+
+    -webkit-animation: spin-right 2s linear infinite;
 }
 
 #mercury-orb {
@@ -173,6 +169,8 @@ span {
     height: 285px;
     margin-top: -143px;
     margin-left: -143px;
+
+    -webkit-animation: spin-right 2.41s linear infinite;
 }
 
 #venus-orb {
@@ -180,6 +178,8 @@ span {
     height: 376px;
     margin-top: -188px;
     margin-left: -188px;
+
+    -webkit-animation: spin-right 6.16s linear infinite;
 }
 
 #earth-orb {
@@ -187,6 +187,8 @@ span {
     height: 500px;
     margin-top: -250px;
     margin-left: -250px;
+
+    -webkit-animation: spin-right 10s linear infinite;
 }
 
 #mars-orb {
@@ -194,6 +196,8 @@ span {
     height: 650px;
     margin-top: -325px;
     margin-left: -325px;
+
+    -webkit-animation: spin-right 18.82s linear infinite;
 }
 
 #ast3 {
@@ -228,36 +232,12 @@ span {
     height: 1000px;
     margin-top: -500px;
     margin-left: -500px;
-}
 
-@-webkit-keyframes rotMerc {
-    from {
-        -webkit-transform:  rotate(0deg)
-                            translate(-143px)
-                            rotate(0deg);
-    }
-    to {
-        -webkit-transform:  rotate(360deg)
-                            translate(-143px) 
-                            rotate(-360deg);
-    }
-}
-
-@-webkit-keyframes rotVen {
-    from {
-        -webkit-transform:  rotate(0deg)
-                            translate(-188px)
-                            rotate(0deg);
-    }
-    to {
-        -webkit-transform:  rotate(360deg)
-                            translate(-188px) 
-                            rotate(-360deg);
-    }
+    -webkit-animation: spin-right 118.6s linear infinite;
 }
 
     
-/*@-webkit-keyframes spin-right {
+@-webkit-keyframes spin-right {
     100% {
         -webkit-transform: rotate(360deg);
            -moz-transform: rotate(360deg);
@@ -275,4 +255,4 @@ span {
          -o-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}*/
+}
