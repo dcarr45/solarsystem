@@ -51,6 +51,20 @@ span {
     color: white;
 }
 
+#fader {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+
+    height: 35px;
+    width: 100px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: white;
+}
+
 #sun {
     position: absolute;
     /* Positions the top-left corner of the image to be *

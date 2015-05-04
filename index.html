@@ -47,11 +47,18 @@
                         animCount--;
                     }
                 });
+
+                $('#fader').fadeOut('slow');
             });
         </script>
 
     
         <img id="sun" src="http://fc02.deviantart.net/fs70/f/2013/292/7/5/sun_transparent_background_sun_world_by_royalblueiv-d6r3ze7.png">
+
+        <div id='fader'>
+            <span></span>
+            <div class="text" id='fadeText'>Zoom out!</div>
+        </div>
 
         <div class='orbit' id='jupiter-orb'>
             <img class='planet' id='jupiter' src='https://scientifickid.files.wordpress.com/2012/04/jupiter.png'>
