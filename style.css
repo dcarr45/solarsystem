@@ -16,6 +16,7 @@ html, body {
 
 .bar {
     position: relative;
+    z-index: 2;
 }
 
 .button {
@@ -30,7 +31,6 @@ html, body {
     border-radius: 10px;
     border-color: white;
     cursor: pointer;
-    z-index: 1;
 }
 
 #orbits {
@@ -130,8 +130,8 @@ span {
 }*/
 
 #jupiter {
-    top: 78px;
-    left: 78px;
+    top: 85px;
+    left: 85px;
 
     height: 120px;
     width: 120px;
@@ -146,6 +146,8 @@ span {
     border-color: white;
     border-style: dotted;
     border-radius: 50%;
+
+    z-index: 1;
 }
 
 #moon-orb {
@@ -233,7 +235,7 @@ span {
     margin-top: -500px;
     margin-left: -500px;
 
-    -webkit-animation: spin-right 118.6s linear infinite;
+    -webkit-animation: spin-right 11.6s linear infinite;
 }
 
     
