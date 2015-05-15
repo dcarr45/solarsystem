@@ -39,16 +39,17 @@
                 var animCount = 0;
                 $('#anim.button').click(function() {
                     if (animCount === 0) {
-                        $('.planet, .orbit, #moon-orb, #sun').css('-webkit-animation-play-state', 'paused');
+                        $('*').css('-webkit-animation-play-state', 'paused');
                         $('#animText').text('Play animation');
                         animCount++;
                     }
                     else {
-                        $('.planet, .orbit, #moon-orb, #sun').css('-webkit-animation-play-state', 'running');
+                        $('*').css('-webkit-animation-play-state', 'running');
                         $('#animText').text('Stop animation');
                         animCount--;
                     }
                 });
+                $('.bnan').addClass('.ready');
 
                 $('#fader').fadeOut(3000);
                 $('.bnan').fadeOut(8000);
