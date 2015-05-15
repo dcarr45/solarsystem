@@ -21,6 +21,8 @@
         <div class="bnan">Fuck Bnan</div>
         
         <script>
+
+            $('#fader').hide();
             $(document).ready(function() {
                 var orbCount = 0;
                 $('#orbits.button').click(function() {
@@ -49,10 +51,12 @@
                         animCount--;
                     }
                 });
-                $('.bnan').addClass('.ready');
-
+                $('#fader').show();
+                setTimeout(function() {
+                    $('.bnan').toggleClass('ready');
+                }, 500);
                 $('#fader').fadeOut(3000);
-                $('.bnan').fadeOut(8000);
+                $('.bnan').fadeOut(6000);
             });
         </script>
 

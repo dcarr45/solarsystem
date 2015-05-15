@@ -19,7 +19,7 @@ html, body {
     z-index: 2;
 }
 
-.bnan {
+.ready {
     position: absolute;
     z-index: 5;
     top: 50%;
@@ -265,7 +265,7 @@ span {
     margin-top: -500px;
     margin-left: -500px;
 
-    -webkit-animation: spin-right 118.6s linear;
+    -webkit-animation: spin-right 118.6s linear infinite;
 }
 
     
@@ -316,6 +316,6 @@ span {
         -webkit-transform: rotate(540deg);
         left: 100%;
         font-size: 80px;
-        display: hidden;
+        opacity: 0;
     }
 }
