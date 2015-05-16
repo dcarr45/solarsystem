@@ -19,18 +19,6 @@ html, body {
     z-index: 2;
 }
 
-.ready {
-    position: absolute;
-    z-index: 5;
-    top: 50%;
-    color: white;
-    font-size: 30px;
-    overflow: hidden;
-    width: 400px;
-    -webkit-animation: bnan 5s linear infinite;
-    -webkit-animation-iteration-count: 1;
-}
-
 .button {
     display: inline-block;
     text-align: center;
@@ -287,35 +275,4 @@ span {
          -o-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}
-
-@-webkit-keyframes bnan {
-    0% { 
-        -webkit-transform: rotate(0deg);
-        left: 0%;
-        font-size: 30px;
-    }
-
-    20% {
-        color: red;
-    }
-
-    40% {
-        color: blue;
-    }
-
-    60% {
-        color: green;
-    }
-
-    80% {
-        color: violet;
-    }
-
-    100% {
-        -webkit-transform: rotate(540deg);
-        left: 100%;
-        font-size: 80px;
-        opacity: 0;
-    }
 }

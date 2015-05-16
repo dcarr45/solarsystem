@@ -17,12 +17,8 @@
                 <div class="text" id='animText'>Stop animation</div>
             </div>
         </div>
-
-        <div class="bnan">Fuck Bnan</div>
         
         <script>
-
-            $('#fader').hide();
             $(document).ready(function() {
                 var orbCount = 0;
                 $('#orbits.button').click(function() {
@@ -41,22 +37,18 @@
                 var animCount = 0;
                 $('#anim.button').click(function() {
                     if (animCount === 0) {
-                        $('*').css('-webkit-animation-play-state', 'paused');
+                        $('.planet, .orbit, #moon-orb, #sun').css('-webkit-animation-play-state', 'paused');
                         $('#animText').text('Play animation');
                         animCount++;
                     }
                     else {
-                        $('*').css('-webkit-animation-play-state', 'running');
+                        $('.planet, .orbit, #moon-orb, #sun').css('-webkit-animation-play-state', 'running');
                         $('#animText').text('Stop animation');
                         animCount--;
                     }
                 });
-                $('#fader').show();
-                setTimeout(function() {
-                    $('.bnan').toggleClass('ready');
-                }, 500);
+
                 $('#fader').fadeOut(3000);
-                $('.bnan').fadeOut(6000);
             });
         </script>
 
