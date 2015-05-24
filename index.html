@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="style.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="script.js"></script>
     </head>
     
     <body>
@@ -17,92 +18,58 @@
                 <div class="text" id='animText'>Stop animation</div>
             </div>
         </div>
-        
-        <script>
-            $(document).ready(function() {
-                var orbCount = 0;
-                $('#orbits.button').click(function() {
-                    if (orbCount === 0) {
-                        $('#orbText').text('Show orbits');
-                        $('.orbit, #moon-orb').css('border-style', 'hidden');
-                        orbCount++;
-                    }
-                    else {
-                        $('#orbText').text('Hide orbits');
-                        $('.orbit, #moon-orb').css('border-style', 'dotted');
-                        orbCount--;
-                    }
-
-                });
-                var animCount = 0;
-                $('#anim.button').click(function() {
-                    if (animCount === 0) {
-                        $('.planet, .orbit, #moon-orb, #sun').css('-webkit-animation-play-state', 'paused');
-                        $('#animText').text('Play animation');
-                        animCount++;
-                    }
-                    else {
-                        $('.planet, .orbit, #moon-orb, #sun').css('-webkit-animation-play-state', 'running');
-                        $('#animText').text('Stop animation');
-                        animCount--;
-                    }
-                });
-
-                $('#fader').fadeOut(3000);
-            });
-        </script>
-
-    
-        <img id="sun" src="http://fc02.deviantart.net/fs70/f/2013/292/7/5/sun_transparent_background_sun_world_by_royalblueiv-d6r3ze7.png">
 
         <div id='fader'>
             <span></span>
             <div class="text" id='fadeText'>Zoom out!</div>
         </div>
-
-        <div class='orbit' id='jupiter-orb'>
-            <img class='planet' id='jupiter' src='https://scientifickid.files.wordpress.com/2012/04/jupiter.png'>
-        </div>
-
-        <!--<div class='orbit' id='ast3'>
-            <img class='asteroid1' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid1' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-        </div>
-        <div class='orbit' id='ast2'>
-            <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid1' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-        </div>
-        <div class='orbit' id='ast1'>
-            <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid1' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-            <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
-        </div>!-->
-
-        <div class='orbit' id='mars-orb'>
-            <img class='planet' id='mars' src='http://2.bp.blogspot.com/-orA3S1GCg68/TyTwr0_ozLI/AAAAAAAAAXU/pThqMAbZalQ/s1600/Mars.gif'>
-        </div>
-        
-        <div class='orbit' id='earth-orb'>
-            <img class='planet' id="earth" src="http://upload.wikimedia.org/wikipedia/commons/2/22/Earth_Western_Hemisphere_transparent_background.png">
-            <div id='moon-orb'>
-                <img class='planet' id="moon" src="http://space-facts.com/wp-content/uploads/moon-transparent.png">
+        <div class='orbContainer'>
+            <div class='orbit' id='jupiter-orb'>
+                <img class='planet' id='jupiter' src='https://scientifickid.files.wordpress.com/2012/04/jupiter.png'>
             </div>
-        </div>
-        
-        <div class='orbit' id='venus-orb'>
-            <img class='planet' id='venus' src='https://lh5.googleusercontent.com/-tqsPCaf2--U/T_9xiSRAOyI/AAAAAAAAACc/XDz9LtjZnXY/w800-h800/venus%2B%25281%2529.png'>
-        </div>
 
-        <div class='orbit' id='mercury-orb'>
-            <img class='planet' id='mercury' src='http://1.bp.blogspot.com/-S4WaVF7emzU/Tiz2l3xYegI/AAAAAAAAALI/PC7BtFc2lEk/s1600/mercury.png'>
+            <!--<div class='orbit' id='ast3'>
+                <img class='asteroid1' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid1' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+            </div>
+            <div class='orbit' id='ast2'>
+                <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid1' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+            </div>
+            <div class='orbit' id='ast1'>
+                <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid2' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid1' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+                <img class='asteroid3' src='http://th04.deviantart.net/fs70/PRE/i/2013/130/f/0/asteroid_stock_3_by_fimar-d64qqfu.png'>
+            </div>!-->
+
+            <div class='orbit' id='mars-orb'>
+                <img class='planet' id='mars' src='http://2.bp.blogspot.com/-orA3S1GCg68/TyTwr0_ozLI/AAAAAAAAAXU/pThqMAbZalQ/s1600/Mars.gif'>
+            </div>
+            
+            <div class='orbit' id='earth-orb'>
+                <img class='planet' id="earth" src="http://upload.wikimedia.org/wikipedia/commons/2/22/Earth_Western_Hemisphere_transparent_background.png">
+                <div id='moon-orb'>
+                    <img class='planet' id="moon" src="http://space-facts.com/wp-content/uploads/moon-transparent.png">
+                </div>
+            </div>
+            
+            <div class='orbit' id='venus-orb'>
+                <img class='planet' id='venus' src='https://lh5.googleusercontent.com/-tqsPCaf2--U/T_9xiSRAOyI/AAAAAAAAACc/XDz9LtjZnXY/w800-h800/venus%2B%25281%2529.png'>
+            </div>
+
+            <div class='orbit' id='mercury-orb'>
+                <img class='planet' id='mercury' src='http://1.bp.blogspot.com/-S4WaVF7emzU/Tiz2l3xYegI/AAAAAAAAALI/PC7BtFc2lEk/s1600/mercury.png'>
+            </div>
+
+            <img id="sun" src="http://fc02.deviantart.net/fs70/f/2013/292/7/5/sun_transparent_background_sun_world_by_royalblueiv-d6r3ze7.png">
         </div>
     </body>
 </html>

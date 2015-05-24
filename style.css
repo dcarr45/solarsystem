@@ -5,17 +5,30 @@ trace orbits
 fuck this sucks
 */
 
-html, body {
+html {
     /* The universe takes up all available space */
     width: 100%;
     height: 100%;
-    
+
     background-image: url("http://th01.deviantart.net/fs71/PRE/i/2011/017/6/f/starfield_stock_by_freelancah-d2k5mcu.jpg");
     background-size: 100% 100%;
 }
 
+#zoom_in {
+    float: right;
+    background-color: white;
+}
+#zoom_out {
+    float: right;
+    background-color: white;
+}
+#zoom_reset {
+    float: right;
+    background-color: white;
+}
+
 .bar {
-    position: relative;
+    position: absolute;
     z-index: 2;
 }
 
@@ -157,6 +170,12 @@ span {
     width: 120px;
 }
 
+.orbContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
 .orbit {
     position: absolute;
     top: 50%;
@@ -190,7 +209,7 @@ span {
     margin-top: -143px;
     margin-left: -143px;
 
-    -webkit-animation: spin-right 2.41s linear infinite;
+    -webkit-animation: spin-right-stag 2.41s linear infinite;
 }
 
 #venus-orb {
@@ -199,7 +218,7 @@ span {
     margin-top: -188px;
     margin-left: -188px;
 
-    -webkit-animation: spin-right 6.16s linear infinite;
+    -webkit-animation: spin-right-hstag 6.16s linear infinite;
 }
 
 #earth-orb {
@@ -217,15 +236,15 @@ span {
     margin-top: -325px;
     margin-left: -325px;
 
-    -webkit-animation: spin-right 18.82s linear infinite;
+    -webkit-animation: spin-right-stag 18.82s linear infinite;
 }
 
-#ast3 {
+/*#ast3 {
     width: 600px;
     height: 600px;
     margin-top: -300px;
     margin-left: -300px;
-    -webkit-animation-duration: 11s;
+    -webkit-animation: spin-right-stag 11s linear infinite;
     border-style: hidden;
 }
 
@@ -234,7 +253,7 @@ span {
     height: 608px;
     margin-top: -304px;
     margin-left: -304px;
-    -webkit-animation-duration: 13s;
+    -webkit-animation: spin-right-hstag 13s linear infinite;
     border-style: hidden;
 }
 
@@ -243,9 +262,9 @@ span {
     height: 612px;
     margin-top: -306px;
     margin-left: -306px;
-    -webkit-animation-duration: 12s;
+    -webkit-animation: spin-right 12s linear infinite;
     border-style: hidden;
-}
+}*/
 
 #jupiter-orb {
     width: 1000px;
@@ -253,17 +272,51 @@ span {
     margin-top: -500px;
     margin-left: -500px;
 
-    -webkit-animation: spin-right 118.6s linear infinite;
+    -webkit-animation: spin-right-hstag 118.6s linear infinite;
 }
 
-    
 @-webkit-keyframes spin-right {
     100% {
         -webkit-transform: rotate(360deg);
-           -moz-transform: rotate(360deg);
-            -ms-transform: rotate(360deg);
-             -o-transform: rotate(360deg);
-                transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+  }
+}
+
+    
+@-webkit-keyframes spin-right-stag {
+    0% {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);        
+    }
+    100% {
+        -webkit-transform: rotate(540deg);
+        -moz-transform: rotate(540deg);
+        -ms-transform: rotate(540deg);
+        -o-transform: rotate(540deg);
+        transform: rotate(540deg);
+  }
+}
+
+@-webkit-keyframes spin-right-hstag {
+    0% {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);        
+    }
+    100% {
+        -webkit-transform: rotate(450deg);
+        -moz-transform: rotate(450deg);
+        -ms-transform: rotate(450deg);
+        -o-transform: rotate(450deg);
+        transform: rotate(450deg);
   }
 }
 
